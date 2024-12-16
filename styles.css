@@ -1,0 +1,261 @@
+:root{
+    --rojo:#7a1010;
+    --fondo:#141414;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--fondo); 
+    font-family: "Lato", sans-serif;
+}
+.contenedor{
+    width: 90%;
+    margin: auto;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    padding: 20px 0;
+    
+    
+}
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+header .logo{
+    font-family: "Anton", sans-serif;
+    font-weight: normal;
+    color: var(--rojo);
+    font-size: 40px;
+}
+header nav a{
+    color: #AAA;
+    text-decoration: none;
+    margin-right: 20px;
+}
+header nav a:hover,
+header nav a.activo{
+    color: #fff;
+}
+/*--Pelicula Principal--*/
+.pelicula-principal{
+    font-size: 16px;
+    height: 80vh;
+    color:#fff;
+    background:  linear-gradient(rgba(0, 0, 0 , .50) 0%, rgba(0, 0, 0 , .50) 100%) ,url(../img/deadpool.jpg);
+    background-position: center top 10%;
+    background-size: cover;
+    margin: 0;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+
+}
+.pelicula-principal .contenedor{
+    margin: 6.25em auto;
+    padding: 20px;
+}
+.pelicula-principal .titulo{
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+.pelicula-principal .descripcion{
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+.pelicula-principal .boton{
+    background: rgba(0, 0, 0 , .50);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #fff;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.18em;
+}
+.pelicula-principal .boton:hover{
+    background: #fff;
+    color: #000;
+}
+.pelicula-principal .boton i{
+    margin-right: 1.25em;
+}
+.contenedor-titulo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+	color: #fff;
+	font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+	background: red;
+}
+
+.footer {
+    padding: 40px 20px; 
+    background-color: black;
+}
+
+.footer--contenedor {
+    max-width: 1200px; /* Establece un ancho máximo para el contenido */
+    margin-inline: auto; /* Centra el contenido */
+}
+
+.iconos {
+    display: flex;
+    gap: 20px;
+}
+
+.iconos li {
+    width: 30px;
+    height: 30px;
+}
+
+.informacion {
+    display: grid;
+    color: rgb(133, 133, 133);
+    gap: 20px; /* Espacio entre los elementos del grid */
+    font-size: 15px;
+}
+
+.informacion p {
+    margin-bottom: 10px; /* Espaciado entre párrafos */
+    line-height: 1.6; /* Mejora la legibilidad */
+}
+
+@media (min-width: 400px) {
+    .informacion {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    .informacion {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .informacion {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+
+.informacion p:hover{
+    color: white;
+}
+.catalogos{
+    padding-block: 2px;
+    background-color: black;
+    color: white;
+}
+.catalogo--peliculas{
+    width: 95%;
+    margin-inline: auto;
+}
+.peliculas{
+    padding: 10px;
+}
+
+.peliculas{
+    overflow-x: scroll;
+    display: flex;
+    gap: 12px;
+}
+.peliculas::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.peliculas{
+    min-width: 200px;
+    height: auto;
+}
+.peliculas {
+	width: 90%;
+	
+	margin: 40px auto 100px auto;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 30px;
+}
+
+.peliculas .pelicula {
+	text-align: center;
+}
+
+.peliculas .pelicula .titulo {
+	font-size: 16px;
+	font-weight: 600;
+    color: #fff;
+}
+.peliculas .pelicula .poster {
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 15px;
+}
+
+.paginacion {
+	position: sticky;
+	bottom: 0;
+	background: #100a1f;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 10px;
+}
+
+.paginacion button {
+    display: none;
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 50px;
+	width: 200px;
+	background: #241744;
+	color: #fff;
+	border-radius: 100px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	transition: .3s ease all;
+}
+
+.paginacion button:hover {
+	background: #24303c;
+}
+
